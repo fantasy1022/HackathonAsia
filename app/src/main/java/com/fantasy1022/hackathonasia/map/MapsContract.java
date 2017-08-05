@@ -30,7 +30,7 @@ public interface MapsContract {
 
         void handlePermission(int requestCode, int[] grantResults);
 
-        void updateMapMaker(int space, int density, Integer[] areaChoice);
+        void updateMapMaker(int space, int density, int oldNum);
 
     }
 }

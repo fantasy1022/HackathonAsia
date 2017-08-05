@@ -17,5 +17,6 @@
 
     <string name="map_space">開放空間</string>
     <string name="map_density">建物密度</string>
+    <string name="old_number">老人數</string>
     <string name="choice_area">行政區域選擇</string>
 </resources>

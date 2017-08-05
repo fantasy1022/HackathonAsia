@@ -156,7 +156,7 @@ public class MapsPresenter extends BasePresenter<MapsContract.View> implements M
     }
 
     @Override
-    public void updateMapMaker(int space, int density, Integer[] areaChoice) {
+    public void updateMapMaker(int space, int density, int oldNum) {
         //Log.d(TAG, "space:" + space + " density:" + density);
         ArrayList<PlaceDetailEntity> placeDetailEntities = new ArrayList<>();
         PlaceEntity placeEntity = FirebaseRepository.getInstance().getPlaceEntity();
@@ -170,14 +170,14 @@ public class MapsPresenter extends BasePresenter<MapsContract.View> implements M
             googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             for (int i = 0; i < placeDetailEntities.size(); i++) {
                 String lmbig = placeDetailEntities.get(i).getLmbig();
-                int floorra = placeDetailEntities.get(i).getFloorra();
-                int gridra = placeDetailEntities.get(i).getGridra();
-                int oldra = placeDetailEntities.get(i).getOldra();
+                int spaceRank = placeDetailEntities.get(i).getFloorra();
+                int densityRank = placeDetailEntities.get(i).getGridra();
+                int oldRank = placeDetailEntities.get(i).getOldra();
 //                double x = placeDetailEntities.get(i).getX();
 //                double y = placeDetailEntities.get(i).getY();
-               // Log.d(TAG,"spaceRank:"+spaceRank+ " densityRank:"+densityRank);
+                // Log.d(TAG,"spaceRank:"+spaceRank+ " densityRank:"+densityRank);
 
-//                if (  spaceRank == space && densityRank == density) {
+                if (spaceRank == space && densityRank == density && oldRank == oldNum) {
                     LatLng latLng = new LatLng(placeDetailEntities.get(i).getY(), placeDetailEntities.get(i).getX());
                     String content = String.format("地標名稱:%s\n地標大分類:%s\n地標小分類:%s\n周邊人口數:%s\n周邊服務老人數:%s\n開放空間指數:%s\n建築密度:%s",
                             placeDetailEntities.get(i).getName(),
@@ -200,7 +200,7 @@ public class MapsPresenter extends BasePresenter<MapsContract.View> implements M
                     googleMap.addMarker(markerOptions);
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, googleMap.getCameraPosition().zoom));
 
-//                }
+                }
             }
         }
 

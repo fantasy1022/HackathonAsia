@@ -43,11 +43,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsCo
     BubbleSeekBar seekbarSpace;
     @BindView(R.id.seekbarRight)
     BubbleSeekBar seekbarDensity;
+    @BindView(R.id.seekbarTop)
+    BubbleSeekBar seekbarTop;
+
     private boolean isSync;
 
     private int space = 5;
     private int density = 5;
-    private Integer[] areaItem = new Integer[]{0, 1, 2, 3, 4};
+    private int oldNum = 5;
 
 
     public MapsFragment() {
@@ -91,7 +94,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsCo
             @Override
             public void getProgressOnFinally(int progress, float progressFloat) {
                 space = progress;
-                mapPresenter.updateMapMaker(space, density, areaItem);
+                mapPresenter.updateMapMaker(space, density, oldNum);
             }
         });
         seekbarSpace.setProgress(space);
@@ -110,11 +113,29 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsCo
             @Override
             public void getProgressOnFinally(int progress, float progressFloat) {
                 density = progress;
-                mapPresenter.updateMapMaker(space, density, areaItem);
+                mapPresenter.updateMapMaker(space, density, oldNum);
+            }
+        });
+        seekbarDensity.setProgress(density);
+        seekbarTop.setOnProgressChangedListener(new BubbleSeekBar.OnProgressChangedListener() {
+            @Override
+            public void onProgressChanged(int progress, float progressFloat) {
+
+            }
+
+            @Override
+            public void getProgressOnActionUp(int progress, float progressFloat) {
+
+            }
+
+            @Override
+            public void getProgressOnFinally(int progress, float progressFloat) {
+                oldNum = progress;
+                mapPresenter.updateMapMaker(space, density, oldNum);
             }
         });
 
-        seekbarDensity.setProgress(density);
+        seekbarTop.setProgress(oldNum);
 
 
         return rootView;
@@ -181,7 +202,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsCo
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mapPresenter.updateMapMaker(space, density, areaItem);
+                mapPresenter.updateMapMaker(space, density, oldNum);
             }
         }, 1000);
     }
@@ -195,13 +216,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsCo
 //        mapFragment.getMapAsync(this);
     }
 
-    public void updateAreaChoice(Integer[] which) {
-        areaItem = which;
-        mapPresenter.updateMapMaker(space, density, areaItem);
-    }
+//    public void updateAreaChoice(Integer[] which) {
+//        areaItem = which;
+//        mapPresenter.updateMapMaker(space, density, areaItem);
+//    }
 
-    public Integer[] getAreaItem(){
-        return areaItem;
-    }
+//    public Integer[] getAreaItem(){
+//        return areaItem;
+//    }
 
 }

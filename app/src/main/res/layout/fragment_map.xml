@@ -5,10 +5,36 @@
     android:layout_height="match_parent"
     tools:context="com.fantasy1022.hackathonasia.map.MapsFragment">
 
+
+    <TextView
+        android:id="@+id/oldTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/old_number"
+        android:textStyle="bold" />
+
+
+    <com.xw.repo.BubbleSeekBar
+        android:id="@+id/seekbarTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/oldTxt"
+        app:bsb_auto_adjust_section_mark="true"
+        app:bsb_max="5"
+        app:bsb_min="1"
+        app:bsb_progress="1"
+        app:bsb_section_count="4"
+        app:bsb_section_text_position="below_section_mark"
+        app:bsb_touch_to_seek="true" />
+
+
     <android.support.percent.PercentFrameLayout
         android:id="@+id/title_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/seekbarTop"
         android:layout_marginTop="10dp">
 
         <TextView
