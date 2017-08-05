@@ -18,6 +18,8 @@ public class PlaceDetailEntity {
     private int gridra;
     private float floor;
     private int floorra;
+    private double lng;
+    private double lat;
 
     public int getIid() {
         return iid;
@@ -69,5 +71,13 @@ public class PlaceDetailEntity {
 
     public int getFloorra() {
         return floorra;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public double getLat() {
+        return lat;
     }
 }

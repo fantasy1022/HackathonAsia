@@ -177,8 +177,8 @@ public class MapsPresenter extends BasePresenter<MapsContract.View> implements M
 //                double y = placeDetailEntities.get(i).getY();
                 // Log.d(TAG,"spaceRank:"+spaceRank+ " densityRank:"+densityRank);
 
-                if (spaceRank == space && densityRank == density && oldRank == oldNum) {
-                    LatLng latLng = new LatLng(placeDetailEntities.get(i).getY(), placeDetailEntities.get(i).getX());
+                if (spaceRank <= space && densityRank <= density && oldRank == oldNum) {
+                    LatLng latLng = new LatLng(placeDetailEntities.get(i).getLat(), placeDetailEntities.get(i).getLng());
                     String content = String.format("地標名稱:%s\n地標大分類:%s\n地標小分類:%s\n周邊人口數:%s\n周邊服務老人數:%s\n開放空間指數:%s\n建築密度:%s",
                             placeDetailEntities.get(i).getName(),
                             placeDetailEntities.get(i).getLmbig(),
