@@ -5,4 +5,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+
+    <string-array name="choice_area_item">
+        <item>東區</item>
+        <item>西區</item>
+        <item>南區</item>
+        <item>北區</item>
+        <item>中區</item>
+    </string-array>
+
+    <string name="map_space">開放空間</string>
+    <string name="map_density">建物密度</string>
+    <string name="choice_area">行政區域選擇</string>
 </resources>

@@ -3,6 +3,10 @@ package com.fantasy1022.hackathonasia;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +17,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.fantasy1022.hackathonasia.map.MapsFragment;
+import com.fantasy1022.hackathonasia.repository.FirebaseRepository;
+
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    public final String TAG = getClass().getSimpleName();
+
+    MapsFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +34,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +43,34 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+//        FirebaseRepository.getInstance().getDateFromFirebase("map_type");
+
+        ButterKnife.bind(this);
+
+        initFragment();
+    }
+
+    private void initFragment() {
+        mapFragment = new MapsFragment();
+        setFragment(mapFragment, false);
+    }
+
+
+    private void setFragment(Fragment fragment, boolean isAddBackStack) {
+        FragmentManager fragmentMgr = getSupportFragmentManager();
+        FragmentTransaction fragmentTrans = fragmentMgr.beginTransaction();
+        Log.d(TAG, "fragment.getClass().getName():" + fragment.getClass().getName());
+        fragmentTrans.replace(R.id.content_layout, fragment, fragment.getClass().getName());//TODO: Check tag fragmentTrans
+        if (isAddBackStack) {
+            fragmentTrans.addToBackStack(null);
+        }
+        fragmentMgr.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                Log.d(TAG, "onBackStackChanged");
+            }
+        });
+        fragmentTrans.commit();
     }
 
     @Override

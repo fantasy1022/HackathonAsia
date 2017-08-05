@@ -5,4 +5,8 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--Map dot-->
+    <dimen name="map_info_window_width">120dp</dimen>
+    <dimen name="map_info_window_height">120dp</dimen>
 </resources>

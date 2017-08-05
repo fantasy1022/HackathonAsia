@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fantasy1022.hackathonasia.map.MapsFragment">
+
+    <android.support.percent.PercentFrameLayout
+        android:id="@+id/title_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/space_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/map_space"
+            android:textStyle="bold"
+            app:layout_widthPercent="50%" />
+
+
+        <TextView
+            android:id="@+id/density_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/map_density"
+            android:textStyle="bold"
+            app:layout_widthPercent="50%" />
+
+    </android.support.percent.PercentFrameLayout>
+
+    <android.support.percent.PercentFrameLayout
+        android:id="@+id/bar_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_frame_layout"
+        android:layout_marginTop="5dp">
+
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekbarLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:bsb_auto_adjust_section_mark="true"
+            app:bsb_max="5"
+            app:bsb_min="1"
+            app:bsb_progress="1"
+            app:bsb_section_count="4"
+            app:bsb_section_text_position="below_section_mark"
+            app:bsb_touch_to_seek="true"
+            app:layout_widthPercent="50%" />
+
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekbarRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            app:bsb_auto_adjust_section_mark="true"
+            app:bsb_max="5"
+            app:bsb_min="1"
+            app:bsb_progress="1"
+            app:bsb_section_count="4"
+            app:bsb_section_text_position="below_section_mark"
+            app:bsb_touch_to_seek="true"
+            app:layout_widthPercent="50%" />
+
+
+    </android.support.percent.PercentFrameLayout>
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar_frame_layout"
+        android:layout_marginTop="10dp"
+        tools:context=".presentation.map.MapsFragment" />
+
+</RelativeLayout>
