@@ -32,11 +32,12 @@ ext {
     //Tool
     butterKnifeVersion = '8.7.0'
     eventBusVersion = '3.0.0'
+    utilcodeVersion = '1.2.1'
 
     //UI
     bubbleseekbarVersion = '3.5-lite'
     materialDialogsVersion = "0.9.4.5"
-
+    materialdatetimepickerVersion = '3.2.2'
 }
 
 dependencies {
@@ -60,11 +61,14 @@ dependencies {
 
     compile "com.xw.repo:bubbleseekbar:$bubbleseekbarVersion"
     compile "com.squareup.picasso:picasso:$picassoVersion"
+    compile "com.blankj:utilcode:$utilcodeVersion"
 
     compile "com.afollestad.material-dialogs:core:$materialDialogsVersion"
+    compile "com.wdullaer:materialdatetimepicker:$materialdatetimepickerVersion"
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:25.3.1'
 }
+
 
 apply plugin: 'com.google.gms.google-services'

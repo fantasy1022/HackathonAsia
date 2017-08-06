@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.fantasy1022.hackathonasia.map.MapsFragment;
+import com.fantasy1022.hackathonasia.report.ReportActivity;
 import com.fantasy1022.hackathonasia.repository.FirebaseRepository;
 
 import butterknife.ButterKnife;
@@ -111,20 +112,23 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_case_query) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            String road ="道路維護";
+            String roadSub = "路平問題";
+            String[] roadSubOpt = getResources().getStringArray(R.array.report_road_sub_item);
+            String roadSubTwo = getString(R.string.report_road_sub_two);
+            String[] roadSubTwoOpt = getResources().getStringArray(R.array.report_road_sub_two_item);
+            ReportActivity.newIntent(this,road,roadSub,roadSubOpt,roadSubTwo,roadSubTwoOpt);
+        } else if (id == R.id.nav_telephone_query) {
 
-        } else if (id == R.id.nav_slideshow) {
+           // http://www.society.taichung.gov.tw/tour/index.asp?Parser=13,3,17
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_normal_qa) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_introduction) {
+          //  https://mayormail.taichung.gov.tw/nTaichung/writemail/FAQ.aspx?t=11
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

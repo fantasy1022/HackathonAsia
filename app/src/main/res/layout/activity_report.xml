@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".report.ReportActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="32dp">
+
+            <TextView
+                android:id="@+id/reportTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/report_time"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/reportTimeTxt"
+                android:textSize="@dimen/large_text_size"
+                tools:text="2017/12/3" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/personInputLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reportTimeTxt"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/personEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/report_person"
+                    android:maxLines="1"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneInputLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personInputLay"
+                android:layout_marginTop="-25dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/report_phone"
+                    android:maxLines="1"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailInputLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneInputLay"
+                android:layout_marginTop="-25dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/report_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/questionInputLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailInputLay"
+                android:layout_marginTop="-25dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/questionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/report_question"
+                    android:maxLines="1"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/reportCategoryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionInputLay"
+                android:layout_marginTop="-25dp"
+                android:text=""
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/questionLay"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/reportCategoryTxt">
+
+                <TextView
+                    android:id="@+id/questionCatTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reportCategoryTxt"
+                    android:text="路平問題"
+                    android:visibility="gone"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/itemOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路面不平" />
+
+                <CheckBox
+                    android:id="@+id/itemTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路面不平" />
+
+                <CheckBox
+                    android:id="@+id/itemThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+                    android:text="路面不平" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionLay2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/questionLay">
+
+                <TextView
+                    android:id="@+id/questionCatTxt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reportCategoryTxt"
+                    android:text="路平問題"
+                    android:visibility="gone"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/itemOne2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路面不平" />
+
+                <CheckBox
+                    android:id="@+id/itemTwo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路面不平" />
+
+                <CheckBox
+                    android:id="@+id/itemThree2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="路面不平" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionLay3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/questionLay2">
+
+                <TextView
+                    android:id="@+id/questionCatTxt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reportCategoryTxt"
+                    android:text="路平問題"
+                    android:visibility="gone"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/itemOne3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兒少福利科" />
+
+                <CheckBox
+                    android:id="@+id/itemTwo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身心障礙福利科" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionLay4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/questionLay3">
+
+                <TextView
+                    android:id="@+id/questionCatTxt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reportCategoryTxt"
+                    android:text="路平問題"
+                    android:visibility="gone"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/itemOne4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="社會救助科" />
+
+                <CheckBox
+                    android:id="@+id/itemTwo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人民團體科" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addressTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionLay4"
+                android:text="@string/report_address"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold" />
+
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/addressTxt" />
+
+            <Button
+                android:id="@+id/addNewPicBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mapFragment"
+                android:text="@string/report_picture" />
+
+
+            <Button
+                android:id="@+id/sendBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addNewPicBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:text="@string/report_send" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

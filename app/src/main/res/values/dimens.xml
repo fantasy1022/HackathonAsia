@@ -9,4 +9,10 @@
     <!--Map dot-->
     <dimen name="map_info_window_width">120dp</dimen>
     <dimen name="map_info_window_height">120dp</dimen>
+
+    <!--Common -->
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="xxlarge_text_size">24sp</dimen>
 </resources>

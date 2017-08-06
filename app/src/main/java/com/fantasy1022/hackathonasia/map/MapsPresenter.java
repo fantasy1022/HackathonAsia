@@ -179,14 +179,17 @@ public class MapsPresenter extends BasePresenter<MapsContract.View> implements M
 
                 if (spaceRank <= space && densityRank <= density && oldRank == oldNum) {
                     LatLng latLng = new LatLng(placeDetailEntities.get(i).getLat(), placeDetailEntities.get(i).getLng());
-                    String content = String.format("地標名稱:%s\n地標大分類:%s\n地標小分類:%s\n周邊人口數:%s\n周邊服務老人數:%s\n開放空間指數:%s\n建築密度:%s",
+                    String content = String.format("地標名稱:%s\n地標大分類:%s\n地標小分類:%s\n周邊人口數:%s\n周邊服務老人數:%s\n老人數排名:%s\n開放空間指數:%s\n開放空間排名:%s\n建築密度:%s\n建築密度排名:%s",
                             placeDetailEntities.get(i).getName(),
                             placeDetailEntities.get(i).getLmbig(),
                             placeDetailEntities.get(i).getLmsmall(),
                             placeDetailEntities.get(i).getPop(),
                             placeDetailEntities.get(i).getOld(),
+                            placeDetailEntities.get(i).getOldra(),
                             placeDetailEntities.get(i).getGrid(),
-                            placeDetailEntities.get(i).getFloor());
+                            placeDetailEntities.get(i).getGridra(),
+                            placeDetailEntities.get(i).getFloor(),
+                            placeDetailEntities.get(i).getFloorra());
 
 
                     MarkerOptions markerOptions = new MarkerOptions()

@@ -19,4 +19,38 @@
     <string name="map_density">建物密度</string>
     <string name="old_number">老人數</string>
     <string name="choice_area">行政區域選擇</string>
+
+
+    <!--Navigation_-->
+    <string name="navigation_case_query">案件查詢</string>
+    <string name="navigation_telephone_query">電話查詢</string>
+    <string name="navigation_normal_qa">常見問答</string>
+    <string name="navigation_case_send">案件送出</string>
+    <string name="navigation_introduction">使用說明</string>
+
+    <!-- Report -->
+    <string name="report_time">*通報時間</string>
+    <string name="report_person">*陳情機構</string>
+    <string name="report_phone">*電話</string>
+    <string name="report_email">*信箱</string>
+    <string name="report_category">*陳情類別</string>
+    <string name="report_question">問題描述</string>
+    <string name="report_address">*陳情地點</string>
+    <string name="report_address_map">以地圖方式標記</string>
+    <string name="report_picture">新增照片</string>
+    <string name="report_send">案件送出</string>
+    <string name="report_note">(*為必填項目)</string>
+
+    <string name="report_road_sub"></string>
+    <string-array name="report_road_sub_item">
+        <item>綜合企劃科</item>
+        <item>社會工作科</item>
+    </string-array>
+
+    <string name="report_road_sub_two"></string>
+    <string-array name="report_road_sub_two_item">
+        <item>婦女福利及性別平等科</item>
+        <item>長青福利科</item>
+    </string-array>
+
 </resources>
