@@ -1,14 +1,16 @@
 # 2017 Asia Open Data Hackathon(Prototype)
 
 
-## 0. Team<br>
+##  Team<br>
 >*Team*<br> 
 > ● KOH<br>
 >*Project* <br>
 > ● Support the Ignored Elderly by Spatial Analysis<br>
 >*Member*<br>
-> ● <br>
+> ● Tim Cho, Angela Liu, Jimmy Kuo, Fantasy Fang<br>
 
+## Introduce<br>
+> *Subject :* Underprivileged Groups and social welfare
+> *Problem & Solution :* Taiwan society is aging fast,and will face a greater need for long-term care.
+Therfore,our reserch aims to benifit Government to figue out where should get first concern. At the same time,We extract information from open-data including population statistic, building data, hospital location...ect, and then employ spatial analysis to figue out which area should get first concern. After that, Govenment can not only allocate scoail resource accurately but also meet the physical and mental demand of senior citizen via our research.
 
-[弱勢族群與社會福利]
-近年人口高齡化議題日趨嚴重，政府因社會福利資源有限，故須審慎評估後投入在能帶來最大效益的地方，本研究使用之開放資料有人口及醫療據點(醫院診所、社區關懷中心等)，以空間分析找尋醫療服務與老人照護佈點缺口，並評估各據點所能服務之人數(容受力)，加以輔佐其餘開放資料給予佈點建議(學校、廟宇等場所)，以作為政府單位決策依據。另可建議建立社福問題相關回報系統，以協助地方治理，使社會局社工、村里長等第一線協助民眾之人士，可藉由該系統統整問題，由下而上彙整民眾需求，優化效率
