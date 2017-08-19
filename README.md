@@ -19,3 +19,13 @@ At the same time,we extracted information from open-data including "population s
 which area should get first concern. 
 After that, th govenment can not only allocate social resources accurately 
 but also meet the physical and mental demand of senior citizen via our research.
+
+## Function<br>
+
+<br>
+<p align="center">
+  <img src="img/main.png">
+  <br>
+  <b>[Main]</b>
+</p>
+<br>
