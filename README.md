@@ -22,10 +22,36 @@ but also meet the physical and mental demand of senior citizen via our research.
 
 ## Function<br>
 
+
+<br>
+<p align="center">
+  <img src="img/spatial analysis1.png">
+  <br>
+  <b>[Buffering and clip]</b>
+</p>
+<br>
+
+
+<br>
+<p align="center">
+  <img src="img/spatial analysis2.png">
+  <br>
+  <b>[Intersect and Layers]</b>
+</p>
+<br>
+
+<br>
+<p align="center">
+  <img src="img/spatial analysis3.png">
+  <br>
+  <b>[Dissolve and abstract]</b>
+</p>
+<br>
+
 <br>
 <p align="center">
   <img src="img/main.png">
   <br>
-  <b>[Main]</b>
+  <b>[Result]</b>
 </p>
 <br>
