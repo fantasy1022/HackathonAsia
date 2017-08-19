@@ -111,8 +111,18 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/questionInputLay"
                 android:layout_marginTop="-25dp"
-                android:text=""
+                android:text="@string/report_category"
                 android:textSize="@dimen/large_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/reportSubCategoryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reportCategoryTxt"
+                android:layout_marginTop="5dp"
+                android:text="@string/report_governament"
+                android:textSize="@dimen/small_text_size"
                 android:textStyle="bold" />
 
 
@@ -120,13 +130,13 @@
                 android:id="@+id/questionLay"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_below="@id/reportCategoryTxt">
+                android:layout_below="@id/reportSubCategoryTxt">
 
                 <TextView
                     android:id="@+id/questionCatTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/reportCategoryTxt"
+                    android:layout_below="@id/reportSubCategoryTxt"
                     android:text="路平問題"
                     android:visibility="gone"
                     android:textSize="@dimen/medium_text_size"
@@ -143,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="路面不平" />
-
+ˋ
                 <CheckBox
                     android:id="@+id/itemThree"
                     android:layout_width="wrap_content"

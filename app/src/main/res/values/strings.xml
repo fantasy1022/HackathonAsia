@@ -29,17 +29,19 @@
     <string name="navigation_introduction">使用說明</string>
 
     <!-- Report -->
-    <string name="report_time">*通報時間</string>
-    <string name="report_person">*陳情機構</string>
-    <string name="report_phone">*電話</string>
-    <string name="report_email">*信箱</string>
-    <string name="report_category">*陳情類別</string>
-    <string name="report_question">問題描述</string>
-    <string name="report_address">*陳情地點</string>
+    <string name="report_time">*Report time</string>
+    <string name="report_person">*Report organization</string>
+    <string name="report_phone">*Telephone</string>
+    <string name="report_email">*Email</string>
+    <string name="report_category">*Report category</string>
+    <string name="report_question">Question </string>
+    <string name="report_address">*Report location</string>
     <string name="report_address_map">以地圖方式標記</string>
     <string name="report_picture">新增照片</string>
     <string name="report_send">案件送出</string>
     <string name="report_note">(*為必填項目)</string>
+    <string name="report_governament">Taichung City Government Social Affairs bureau</string>
+
 
     <string name="report_road_sub"></string>
     <string-array name="report_road_sub_item">
