@@ -31,18 +31,9 @@ but also meet the physical and mental demand of senior citizen via our research.
 </p>
 <br>
 
-
 <br>
 <p align="center">
-  <img src="img/spatial analysis2.png">
-  <br>
-  <b>[Intersect and layers]</b>
-</p>
-<br>
-
-<br>
-<p align="center">
-  <img src="img/spatial analysis3.png">
+  <img src="img/spatial analysis3.png">
   <br>
   <b>[Dissolve and abstract]</b>
 </p>
